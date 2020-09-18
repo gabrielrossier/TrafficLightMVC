@@ -8,7 +8,7 @@ class TrafficLight
     public $yellow;
     public $green;
     public $ActualState;
-
+    public $AllowHS;
 
     /*
     0 -> stop 
@@ -25,24 +25,28 @@ class TrafficLight
                 $this->yellow = false;
                 $this->green = false;
                 $this->ActualState = 0;
+                $this->AllowHS = "";
                 break;
             case 1:
                 $this->red = true;
                 $this->yellow = true;
                 $this->green = false;
                 $this->ActualState = 1;
+                $this->AllowHS = "disabled";
                 break;
             case 2:
                 $this->red = false;
                 $this->yellow = false;
                 $this->green = true;
                 $this->ActualState = 2;
+                $this->AllowHS = "";
                 break;
             case 3:
                 $this->red = false;
                 $this->yellow = true;
                 $this->green = false;
                 $this->ActualState = 3;
+                $this->AllowHS = "disabled";
                 break;
             case 4:
                 $this->red = false;
@@ -55,6 +59,7 @@ class TrafficLight
                 $this->yellow = true;
                 $this->green = false;
                 $this->ActualState = 5;
+                $this->AllowHS = "disabled";
                 break;
             default:
                 $this->red = true;

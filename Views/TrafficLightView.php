@@ -9,9 +9,4 @@
 
 </div class="buttons">
 <a class="btn" href="index?action=nextLight">&#xbb;</a>
-<a class="btn" href="index?action=nextHS"> HS</a>
-
-<?php
-
-
-?>
+<a class="btn<?= $Light->AllowHS ?>" href="index?action=nextHS" > HS</a>
